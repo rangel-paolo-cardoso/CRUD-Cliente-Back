@@ -7,11 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-// import lombok.Data;
-
-// @Data
-// @NoArgsCOnstructor
-// @AllArgsConstructor
 @Entity
 @Table(name="cliente")
 public class Cliente {
@@ -21,19 +16,19 @@ public class Cliente {
   @Column(name = "id", unique = true, nullable = false)
   private long id;
 
-  @Column(name = "nome")
+  @Column(name = "nome", nullable = false)
   private String nome;
 
-  @Column(name = "cpf")
+  @Column(name = "cpf", nullable = false)
   private String cpf;
 
-  @Column(name = "telefone")
+  @Column(name = "telefone", nullable = false)
   private String telefone;
 
-  @Column(name = "observacao")
+  @Column(name = "observacao", nullable = false)
   private String observacao;
 
-  @Column(name = "endereco")
+  @Column(name = "endereco", nullable = false)
   private String endereco;
 
   public long getId() {
