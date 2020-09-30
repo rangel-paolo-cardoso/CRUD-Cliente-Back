@@ -12,8 +12,7 @@ import javax.persistence.Table;
 public class Cliente {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  @Column(name = "id", unique = true, nullable = false)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
   @Column(name = "nome", nullable = false)
